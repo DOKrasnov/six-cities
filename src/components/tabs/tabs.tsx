@@ -1,18 +1,6 @@
 import {ReactElement} from 'react';
 import {CITIES} from '../../const/const.ts';
-
-type TabProps = {
-  city: string;
-}
-
-const Tab = ({city}: TabProps): ReactElement => (
-  <li className="locations__item">
-    <a className="locations__item-link tabs__item" href="#">
-      <span>{city}</span>
-    </a>
-  </li>
-);
-
+import LocationItem from "../common/location-item/location-item.tsx";
 function Tabs(): ReactElement {
   return (
     <div className="tabs">
@@ -20,7 +8,7 @@ function Tabs(): ReactElement {
         <ul className="locations__list tabs__list">
           {
             CITIES.map((city: string): ReactElement => (
-              <Tab
+              <LocationItem
                 key={city}
                 city={city}
               />

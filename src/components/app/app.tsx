@@ -1,6 +1,6 @@
 import {ReactElement} from 'react';
-import MainPage from '../../pages/main-page/main-page.tsx';
 import {Offers} from '../../types/types.ts';
+import MainPage from '../../pages/main-page/main-page.tsx';
 
 type AppProps = {
   offers: Offers;
@@ -9,6 +9,8 @@ type AppProps = {
 function App({offers}: AppProps): ReactElement {
   return (
     <MainPage offers={offers}/>
+    // <LoginPage/>
+    // <OfferPage/>
   );
 }
 

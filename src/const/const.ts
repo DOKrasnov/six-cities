@@ -8,3 +8,10 @@ export const OFFER_GALLERY_IMAGES = [
   'img/studio-01.jpg',
   'img/apartment-01.jpg'
 ];
+
+export const AppRoute = {
+  Root: '/',
+  Offer: '/offer',
+  Favorites: '/favorites',
+  Login: '/login'
+} as const;

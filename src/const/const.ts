@@ -9,9 +9,15 @@ export const OFFER_GALLERY_IMAGES = [
   'img/apartment-01.jpg'
 ];
 
-export const AppRoute = {
-  Root: '/',
-  Offer: '/offer',
-  Favorites: '/favorites',
-  Login: '/login'
-} as const;
+export enum AppRoute {
+  Root = '/',
+  Offer = '/offer',
+  Favorites = '/favorites',
+  Login = '/login'
+}
+
+export enum AuthorizationStatus {
+  Auth = 'AUTH',
+  NoAuth = 'NO_AUTH',
+  Unknown = 'UNKNOWN',
+}

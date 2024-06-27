@@ -1,12 +1,23 @@
 export type Location = {
-    latitude: number;
-    longitude: number;
-    zoom: number;
+  latitude: number;
+  longitude: number;
+  zoom: number;
 }
 
 export type City = {
-    name: string;
-    location: Location;
+  name: string;
+  location: Location;
+}
+
+export type User = {
+  name: string;
+  avatarUrl: string;
+  isPro: boolean;
+}
+
+export type FullUserInfo = User & {
+  email: string;
+  token: string;
 }
 
 export type Offer = {
@@ -22,4 +33,29 @@ export type Offer = {
   previewImage: string;
 };
 
+type OfferWithoutPreview = Omit<Offer, 'previewImage'>
+
+export type FullOffer = OfferWithoutPreview & {
+  description: string;
+  bedrooms: number;
+  goods: string[];
+  host: User;
+  images: string[];
+  maxAdults: number;
+}
+
 export type Offers = Offer[];
+
+export type FavoriteOffer = FullOffer & {
+  previewImage: string;
+}
+
+type Comment = {
+  id: string;
+  date: string;
+  user: User;
+  comment: string;
+  rating: number;
+}
+
+export type Comments = Comment[];

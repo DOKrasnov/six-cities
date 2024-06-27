@@ -1,6 +1,6 @@
-import {Offers} from './types/types.ts';
+import {Offers} from '../types/types.ts';
 
-export const mocks: Offers = [
+export const offers: Offers = [
   {
     'id': 'a13b9fbd-1328-4e59-baad-7353729df28e',
     'title': 'House in countryside',

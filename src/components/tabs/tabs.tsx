@@ -1,6 +1,7 @@
 import {ReactElement} from 'react';
 import {CITIES} from '../../const/const.ts';
-import LocationItem from "../common/location-item/location-item.tsx";
+import LocationItem from '../common/location-item/location-item.tsx';
+
 function Tabs(): ReactElement {
   return (
     <div className="tabs">

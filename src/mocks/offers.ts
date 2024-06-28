@@ -20,7 +20,7 @@ export const offers: Offers = [
       'longitude': 2.342499,
       'zoom': 16
     },
-    'isFavorite': false,
+    'isFavorite': true,
     'isPremium': false,
     'rating': 2.7
   },
@@ -112,7 +112,7 @@ export const offers: Offers = [
       'longitude': 2.375499,
       'zoom': 16
     },
-    'isFavorite': false,
+    'isFavorite': true,
     'isPremium': true,
     'rating': 3.6
   }

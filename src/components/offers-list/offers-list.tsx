@@ -21,6 +21,9 @@ function OffersList({offers}: OffersListProps): ReactElement {
               title={offer.title}
               type={offer.type}
               price={offer.price}
+              rating={offer.rating}
+              isFavorite={offer.isFavorite}
+              isPremium={offer.isPremium}
               previewImage={offer.previewImage}
             />
           ))

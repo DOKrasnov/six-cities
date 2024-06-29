@@ -5,9 +5,13 @@ import SortForm from '../sort-form/sort-form.tsx';
 
 type OffersListProps = {
   offers: Offers;
+  activeTab: string;
 };
 
-function OffersList({offers}: OffersListProps): ReactElement {
+function OffersList({offers, activeTab}: OffersListProps): ReactElement {
+
+  const activeOffers: Offers = offers.filter((offer: Offer) => offer.city.name === activeTab);
+
   return (
     <section className="cities__places places">
       <h2 className="visually-hidden">Places</h2>
@@ -15,7 +19,7 @@ function OffersList({offers}: OffersListProps): ReactElement {
       <SortForm/>
       <div className="cities__places-list places__list tabs__content">
         {
-          offers.map((offer: Offer): ReactElement => (
+          activeOffers.map((offer: Offer): ReactElement => (
             <OfferCard
               key={offer.id}
               title={offer.title}

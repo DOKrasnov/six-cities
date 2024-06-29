@@ -2,7 +2,13 @@ import {ReactElement} from 'react';
 import {CITIES} from '../../const/const.ts';
 import LocationItem from '../common/location-item/location-item.tsx';
 
-function Tabs(): ReactElement {
+type TabsProps = {
+  activeTab: string;
+  setActiveTab: (arg0: string) => void;
+}
+
+function Tabs({activeTab, setActiveTab}: TabsProps): ReactElement {
+
   return (
     <div className="tabs">
       <section className="locations container">
@@ -12,6 +18,8 @@ function Tabs(): ReactElement {
               <LocationItem
                 key={city}
                 city={city}
+                activeTab={activeTab}
+                clickHandler={() => setActiveTab(city)}
               />
             ))
           }
